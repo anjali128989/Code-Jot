@@ -8,11 +8,7 @@ import { Toaster } from 'react-hot-toast'
 import Shared from './pages/Shared'
 import Reminders from './pages/Reminders'
 import useReminder from './hooks/useReminder'
-import ProgressPage from './pages/ProgressPage.jsx'
-
-
-  ;
-
+import ImageUploader from './pages/ImageUploader'
 
 axios.defaults.baseURL = "http://localhost:8080/"
 
@@ -37,7 +33,7 @@ function App() {
           <Route path='/bin' element={<Bin />} />
           <Route path='/shared/:noteId' element={<Shared />} />
           <Route path='/reminders' element={<Reminders />} />
-          <Route path='/ProgressPage' element={<ProgressPage />} />
+          <Route path='/ImageUploader' element={<ImageUploader />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>

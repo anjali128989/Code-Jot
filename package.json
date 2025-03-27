@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "progressbar.js": "^1.1.1",
-    "react-router-dom": "^7.4.0"
-  }
-}
