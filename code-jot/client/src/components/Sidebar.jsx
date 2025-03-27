@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom'
 import { FaBell, FaRegLightbulb } from 'react-icons/fa'
-import { FaRegTrashAlt } from 'react-icons/fa'
+import { FaRegTrashAlt,FaRegClock } from 'react-icons/fa'
+
+
 
 function Sidebar() {
   const iconSize = 22
@@ -10,8 +12,7 @@ function Sidebar() {
         <NavLink
           to='/'
           className={({ isActive }) =>
-            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${
-              isActive ? 'bg-purple-200' : 'hover:bg-purple-100'
+            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${isActive ? 'bg-purple-200' : 'hover:bg-purple-100'
             }`
           }
           title='Notes'
@@ -19,11 +20,12 @@ function Sidebar() {
           <FaRegLightbulb size={iconSize} />
           {/* <span className=''>Notes</span> */}
         </NavLink>
+
+        {/*remainder*/}
         <NavLink
           to='/reminders'
           className={({ isActive }) =>
-            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${
-              isActive ? 'bg-purple-200' : 'hover:bg-purple-100'
+            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${isActive ? 'bg-purple-200' : 'hover:bg-purple-100'
             }`
           }
           title='Notes'
@@ -31,11 +33,20 @@ function Sidebar() {
           <FaBell size={iconSize} />
           {/* <span className=''>Notes</span> */}
         </NavLink>
+
+        {/* Progress (Deadline) */}
+        <NavLink
+         to="/ProgressPage"
+          className={({ isActive }) =>
+            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${isActive ? 'bg-purple-200' : 'hover:bg-purple-100'}`}
+          title="Deadline">
+          <FaRegClock size={iconSize} />
+        </NavLink>
+
         <NavLink
           to='/bin'
           className={({ isActive }) =>
-            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${
-              isActive ? 'bg-purple-200' : 'hover:bg-purple-100'
+            `p-3 transition-all duration-300 hover:scale-105 rounded-full ${isActive ? 'bg-purple-200' : 'hover:bg-purple-100'
             }`
           }
           title='Bin'
